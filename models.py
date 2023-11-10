@@ -25,6 +25,7 @@ class Cuisine(Base):
     def __repr__(self) -> str:
         return f"Cuisine(id={self.id!r}, cuisine_type={self.cuisine_id!r})"
 
+# create another class for the category table
 class Category(Base):
     __tablename__= "category"
 
@@ -33,6 +34,8 @@ class Category(Base):
 
     def __repr__(self) -> str:
         return f"Category(id={self.id!r}, category_type={self.category_id!r})"
+
+
 
 class Menu_item(Base):
     __tablename__ = "menu_item"
@@ -60,5 +63,3 @@ class Menu_item(Base):
     def __repr__(self) -> str:
         return f"Menu Item(id={self.id!r}, title={self.title!r}, cuisine={self.cuisine_id!r}, category={self.category_id!r}, description={self.description!r}, price={self.price!r}, spicy_level={self.spicy_level!r})"
         #might need to adjust this...
-
-# create another class for the category table

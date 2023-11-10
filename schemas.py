@@ -1,15 +1,15 @@
 from typing import Optional
 from pydantic import BaseModel
 
-class CategoryModel(BaseModel):
+class CategorySchema(BaseModel):
     id: int
     category_type: str | None
 
-class CuisineModel(BaseModel):
+class CuisineSchema(BaseModel):
     id: int
     cuisine_type: str | None
 
-class MenuItemModel(BaseModel)
+class MenuItemSchema(BaseModel)
     id: int
     title: str | None
     cuisine_id: int
