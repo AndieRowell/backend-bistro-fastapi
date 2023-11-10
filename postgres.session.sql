@@ -57,12 +57,24 @@ VALUES (
     -- id:integer,
     'tom yum soup',
     -- cuisine_id:integer,
-    cuisine_id:integer,
+    1,
     -- category_id:integer,
-    category_id:integer,
+    1,
     'a deliscious sour and spicy soup',
     9.99,
     8
+  );
+
+INSERT INTO menu_item (
+    -- id,
+    title,
+    -- cuisine_id,
+    cuisine_id,
+    -- category_id,
+    category_id,
+    description,
+    price,
+    spicy_level
   )
 
 VALUES (
@@ -76,6 +88,18 @@ VALUES (
     6.99,
     2
   );
+
+INSERT INTO menu_item (
+    -- id,
+    title,
+    -- cuisine_id,
+    cuisine_id,
+    -- category_id,
+    category_id,
+    description,
+    price,
+    spicy_level
+  )
 
 VALUES (
     -- id:integer,
