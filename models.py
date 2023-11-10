@@ -33,6 +33,20 @@ class Menu_item(Base):
 
 # create another class for the cuisine table
 class Cuisine(Base):
+    __tablename__= "cuisine"
 
+    #in the demo example why did we put in string? wouldn't id be an integer?
+    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    cuisine_id: Mapped[int] = mapped_column(ForeignKey("cuisine.id"))
+        #cuisine_id might be wrong here?
+    #menu_item_id????
+    #menu_item_id: Mapped[int] = mapped_column(ForeignKey("menu_item.id"))
+
+    #relationships
+    cuisine_type: Mapped["CuisineType"] = relationship(back_populates="cuisine")
+        #questioning the "CuisineType" - which is it exactly referring to
+
+    def __repr__(self) -> str:
+        return f"Cuisine(id={self.id!r}, cuisine_id={self.cuisine_id!r})"
 
 # create another class for the category table
