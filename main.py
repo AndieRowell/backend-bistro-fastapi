@@ -17,4 +17,5 @@ app = FastAPI() #creates an api object - initializes it - always need to have th
 async def root():
     return {"message": "Hello World"}
 
-@app.get
+@app.get("/models/{menu_item}")
+    return 
